@@ -24,7 +24,7 @@ const db = require('./config/database')
 mongoose.Promise = global.Promise
 
 // Connect Mongoose
-mongoose.connect('mongodb://localhost/vidjot-dev')
+mongoose.connect(db.mongoURI)
 .then( () => console.log('MongoDB connected..'))
 .catch( err => console.log(err))
 
